@@ -1,0 +1,11 @@
+%h1 Library
+
+%p= params[:path]
+
+- Dir.glob("#{params[:path]}/*").each do |file|
+  - if File.directory?(file)
+    = link_to file.split('/').last, library_list_content_path(path: file)
+
+  - else
+    = link_to file.split('/').last, '#'
+
