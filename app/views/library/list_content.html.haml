@@ -7,5 +7,4 @@
     = link_to file.split('/').last, library_list_content_path(path: file)
 
   - else
-    = link_to file.split('/').last, '#'
-
+    = link_to file.split('/').last, library_play_file_path(file: file), remote: true

@@ -1,5 +1,5 @@
 %h1 Library
 
-- Dir.glob("/Users/donaier/projects/raspberry_stuff/demo_folder_structure/*").each do |file|
+- Dir.glob(@library_path).each do |file|
   - if File.directory?(file)
     = link_to file.split('/').last, library_list_content_path(path: file)

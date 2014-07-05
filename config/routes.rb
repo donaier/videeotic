@@ -5,4 +5,5 @@ Videeotic::Application.routes.draw do
   resources :library, only: [:index]
 
   get 'library/list_content'
+  get 'library/play_file'
 end
