@@ -1,5 +1,10 @@
 %h1 Library
 
-- Dir.glob(@library_path).each do |file|
-  - if File.directory?(file)
-    = link_to file.split('/').last, library_list_content_path(path: file)
+%ul.library-list.small-block-grid-2
+  - Dir.glob(@library_path).each do |file|
+    - if File.directory?(file)
+      %li
+        = link_to library_list_content_path(path: file) do
+          .tile
+            = file.split('/').last
+

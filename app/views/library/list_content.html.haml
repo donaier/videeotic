@@ -2,9 +2,16 @@
 
 %p= params[:path]
 
-- Dir.glob("#{params[:path]}/*").each do |file|
-  - if File.directory?(file)
-    = link_to file.split('/').last, library_list_content_path(path: file)
+%ul.detail-list.small-block-grid-3.large-block-grid-4
+  - Dir.glob("#{params[:path]}/*").each do |file|
+    %li
+      - if File.directory?(file)
+        = link_to library_list_content_path(path: file) do
+          .tile= file.split('/').last
+      
 
-  - else
-    = link_to file.split('/').last, library_play_file_path(file: file), remote: true
+      - else
+        = link_to library_play_file_path(file: file), remote: true do
+          .tile.play-tile
+            = file.split('/').last
+            context stuff
