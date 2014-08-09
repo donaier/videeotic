@@ -1,4 +1,4 @@
 #!/bin/bash
 echo '----'
-echo $1 
+omxplayer -b $1 < /home/videeotic/fifo
 echo '----'
