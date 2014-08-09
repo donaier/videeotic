@@ -1,7 +1,7 @@
 class LibraryController < ApplicationController
 
   def index
-    @library_path = "/Users/donaier/projects/raspberry_stuff/demo_folder_structure/*"
+    @library_path = "/netdrive/OpenShare/Plex Media Center/*"
   end
 
   def list_content
