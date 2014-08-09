@@ -65,5 +65,5 @@ rvm :rvmrc
 # Note: you can only call a single rake task. If you need to run several
 # tasks just create one task that wrapps all the others.
 
-rake :post_deploy, 'RAILS_ENV=production'
+# rake :post_deploy, 'RAILS_ENV=production'
 
