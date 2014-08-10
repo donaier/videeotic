@@ -17,3 +17,16 @@
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
+
+$(document).ready(function() {
+
+  if ($('#player-controls').hasClass('showit')) {
+    $('#player-controls').foundation('reveal', 'open');
+  }
+
+  $('.trigger-modal').click(function() {
+    $('#player-controls').foundation('reveal', 'open');
+  })
+});
+
+
