@@ -11,7 +11,7 @@
       
 
       - else
-        = link_to library_play_file_path(file: file), remote: true do
+        = link_to library_play_file_path(file: file) do
           .tile.play-tile
             = file.split('/').last
             context stuff

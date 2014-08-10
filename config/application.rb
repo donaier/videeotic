@@ -8,6 +8,9 @@ Bundler.require(:default, Rails.env)
 
 module Videeotic
   class Application < Rails::Application
+
+    VIDEO_SHELL = IO.popen('sh > out.log', 'w+')
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

@@ -8,8 +8,6 @@ class LibraryController < ApplicationController
   end
 
   def play_file
-    system("sh #{Rails.root}/app/scripts/library/play_file.sh '#{params[:file]}'")
-
-    render nothing: true
+    Videeotic::Application::VIDEO_SHELL.puts("omxplayer -b -o hdmi \"#{params[:file]}\"")
   end
 end

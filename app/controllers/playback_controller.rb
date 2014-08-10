@@ -7,7 +7,7 @@ class PlaybackController < ApplicationController
   end
 
   def play
-    system("sh #{Rails.root}/app/scripts/playback/play.sh")
+    Videeotic::Application::VIDEO_SHELL.write('p')
 
     render nothing: true
   end

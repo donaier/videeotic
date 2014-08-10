@@ -1,0 +1,6 @@
+%p= params[:file]
+.button-bar
+  %ul.button-group
+    %li= link_to 'Start...', playback_start_path(@sh_process), class: 'button', remote: true
+    %li= link_to 'Play/Pause', playback_play_path(@sh_process), class: 'button', remote: true
+    %li= link_to 'quit', playback_quit_path(@sh_process), class: 'button', remote: true
