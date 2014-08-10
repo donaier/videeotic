@@ -7,7 +7,6 @@ Videeotic::Application.routes.draw do
   get 'library/list_content'
   get 'library/play_file'
 
-  get 'playback/start'
   get 'playback/play'
   get 'playback/quit'
 end
