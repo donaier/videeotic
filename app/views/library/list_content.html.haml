@@ -1,7 +1,5 @@
 %h1 Library
 
-%p= params[:path]
-
 %ul.detail-list.small-block-grid-3.large-block-grid-4
   - Dir.glob("#{params[:path]}/*").each do |file|
     %li
