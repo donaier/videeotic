@@ -17,3 +17,13 @@
         = yield
 
   %footer
+
+
+- if system('pidof omxplayer.bin')
+
+  .row
+    .columns
+      .button-bar
+        %ul.button-group
+          %li= link_to 'Play/Pause', playback_play_path, class: 'button', remote: true
+          %li= link_to 'quit', playback_quit_path, class: 'button', remote: true

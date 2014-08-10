@@ -9,5 +9,7 @@ class LibraryController < ApplicationController
 
   def play_file
     Videeotic::Application::VIDEO_SHELL.puts("omxplayer -b -o hdmi \"#{params[:file]}\"")
+
+    render nothing: true
   end
 end
