@@ -6,6 +6,20 @@
   </head>
   <body>
     <h1><%= title %></h1>
-    <p><%= folders %></p>
+    <% var base_path = '/Users/donaier/projects/raspberry_stuff/demo_folder_structure/' + media_path %>
+
+    <p><%= media_path %></p>
+
+    <% entries.forEach(function(entry, index) { %>
+      <% if(fs.lstatSync(base_path + '/' + entry).isDirectory()) { %>
+        <a href=<%= (media_path + '%2F' + entry).replace(/ /g, '%20').replace(/\//g, '%2F') %>><%= entry %></a>
+      <% } %>
+
+      <% if(fs.lstatSync(base_path + '/' + entry).isFile()) { %>
+        <a href=<%= '/play/' + (media_path + '/' + entry).replace(/ /g, '%20').replace(/\//g, '%2F') %>><%= entry %></a>
+      <% } %>
+
+    <% }); %>
+
   </body>
 </html>

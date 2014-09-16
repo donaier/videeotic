@@ -5,9 +5,10 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var home = require('./routes/home')
+var home = require('./routes/home');
 var play = require('./routes/play');
-var library = require('./routes/library')
+var library = require('./routes/library');
+var omx = require('omxdirector');
 
 var app = express();
 
